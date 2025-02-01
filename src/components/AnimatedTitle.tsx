@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import clsx from "clsx";
 
 type AnimatedTitleProps = {
-    title: string;
+    title: Element | string | React.ReactNode;
     className: string;
 };
 
@@ -40,9 +40,9 @@ export default function AnimatedTitle({title, className}: AnimatedTitleProps): R
 
     return (
         <div ref={containerRef} className={clsx("animated-title", className)}>
-            {title.split("<br/>").map((line, index) => (
+            {typeof title === 'string' && title.split("<br/>").map((line: string, index: number) => (
                 <div key={index} className="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3">
-                    {line.split(" ").map((word, idx) => (
+                    {line.split(" ").map((word: string, idx: number) => (
                         <span key={idx} className="animated-word" dangerouslySetInnerHTML={{__html: word}}/>
                     ))}
                 </div>

@@ -56,7 +56,7 @@ export default function Story(): React.JSX.Element{
                     the multiversal ip world
                 </p>
                 <div className="relative size-full">
-                    <AnimatedTitle title="the st<b>o</b>ry of a hidden real<b>m</b>" className="mt-5 pointer-events-none mix-blend-difference relative z-10"/>
+                    <AnimatedTitle title="the st<b>o</b>ry of <br/> a hidden real<b>m</b>" className="mt-5 pointer-events-none mix-blend-difference relative z-10"/>
                     <div className="story-img-container">
                         <div className="story-img-mask">
                             <div className="story-img-content">

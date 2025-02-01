@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import clsx from "clsx";
 
 type ButtonProps = {
-    id: string;
+    id?: string;
     title: string;
     leftIcon?: ReactNode;
     rightIcon?: ReactNode;
